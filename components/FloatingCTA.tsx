@@ -24,7 +24,7 @@ export default function FloatingCTA() {
       </button>
       <button
         type="button"
-        onClick={() => scrollToId("lead-form")}
+        onClick={() => scrollToId("consultant")}
         className="floating-btn bg-gradient-to-r from-cyan-500 to-emerald-500 text-white"
         aria-label="获取报价"
         title="获取报价"

@@ -22,10 +22,9 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-semibold text-white">联系方式</p>
+          <p className="font-semibold text-white">咨询方式</p>
           <div className="mt-3 grid gap-2 text-sm">
-            <span>手机号：{siteConfig.phone}</span>
-            <span>微信号：{siteConfig.wechatId}</span>
+            <span>请在页面二维码区域扫码添加广告顾问微信。</span>
             <span>域名：{siteConfig.domain}</span>
           </div>
         </div>

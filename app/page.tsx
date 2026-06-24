@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ClipboardList, MessageCircle, Target, Users, Zap } from "lucide-react";
+import CaseExamples from "@/components/CaseExamples";
 import ConsultantCard from "@/components/ConsultantCard";
 import FAQ from "@/components/FAQ";
-import LeadForm from "@/components/LeadForm";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
 import { siteConfig } from "@/config/site";
@@ -57,7 +57,6 @@ export default function HomePage() {
     url: siteConfig.url,
     areaServed: siteConfig.city,
     description: siteConfig.description,
-    telephone: siteConfig.phone,
     sameAs: [siteConfig.url],
     makesOffer: {
       "@type": "Offer",
@@ -90,7 +89,7 @@ export default function HomePage() {
               免费获取郑州电梯内电子屏广告报价、点位资源表和投放建议
             </p>
             <div className="mt-6 grid gap-3 sm:flex">
-              <Link href="#lead-form" className="btn-primary justify-center">
+              <Link href="#consultant" className="btn-primary justify-center">
                 <ClipboardList size={19} aria-hidden="true" />
                 免费获取报价
               </Link>
@@ -163,6 +162,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CaseExamples />
+
       <section className="section-shell">
         <div className="section-inner">
           <SectionTitle title="为什么选择电梯广告" description="电梯广告的价值在于稳定场景、高频出现和本地触达，适合需要持续露出的区域业务。" />
@@ -193,8 +194,21 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell">
-        <div className="section-inner grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <LeadForm />
+        <div className="section-inner grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <SectionTitle
+              eyebrow="直接扫码"
+              title="获取郑州电梯广告报价和点位资源表"
+              description="当前静态站不保留表单提交，避免线索无法进入后台。建议直接扫码添加广告顾问微信，沟通行业、预算、投放区域和素材形式。"
+            />
+            <div className="mt-6 grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+              {["报价区间", "点位资源表", "投放区域建议", "视频或图片素材建议"].map((item) => (
+                <div key={item} className="rounded-lg border border-slate-200 bg-white p-4 shadow-soft">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
           <ConsultantCard />
         </div>
       </section>

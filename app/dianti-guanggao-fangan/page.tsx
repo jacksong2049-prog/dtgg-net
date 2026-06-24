@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ConsultantCard from "@/components/ConsultantCard";
-import LeadForm from "@/components/LeadForm";
 import SectionTitle from "@/components/SectionTitle";
 import { siteConfig } from "@/config/site";
 import { planItems } from "@/data/services";
@@ -54,8 +53,13 @@ export default function PlanPage() {
       </section>
 
       <section className="bg-white px-4 py-14 md:px-6 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <LeadForm />
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <SectionTitle
+              title="把行业需求发给广告顾问"
+              description="扫码后可直接说明行业、目标客群、预算区间和投放区域，由广告顾问按郑州电梯内电子屏资源给出方案建议。"
+            />
+          </div>
           <ConsultantCard />
         </div>
       </section>

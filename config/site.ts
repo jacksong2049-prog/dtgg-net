@@ -5,8 +5,6 @@ export const siteConfig = {
   city: "郑州",
   serviceName: "郑州电梯广告投放咨询",
   consultantName: "广告顾问",
-  phone: "请替换为朋友手机号",
-  wechatId: "请替换为朋友微信号",
   wechatQrPath: "/wechat-qr.png",
   slogan: "免费获取郑州电梯内电子屏广告报价、点位资源表和投放建议",
   description:

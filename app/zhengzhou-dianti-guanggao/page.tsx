@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Building2 } from "lucide-react";
 import ConsultantCard from "@/components/ConsultantCard";
-import LeadForm from "@/components/LeadForm";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
 import { siteConfig } from "@/config/site";
@@ -34,8 +33,8 @@ export default function ZhengzhouElevatorAdsPage() {
             围绕郑州社区电梯、写字楼电梯、小区电梯和商务楼宇电梯内部电子显示屏广告，提供报价区间、点位资源表和投放建议。广告可在电梯轿厢内屏幕播放视频或展示图片。
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="#lead-form" className="btn-primary">
-              获取报价表单
+            <Link href="#consultant" className="btn-primary">
+              扫码获取报价
             </Link>
             <Link href="#consultant" className="btn-secondary">
               添加广告顾问微信
@@ -74,8 +73,13 @@ export default function ZhengzhouElevatorAdsPage() {
       </section>
 
       <section className="section-shell">
-        <div className="section-inner grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <LeadForm />
+        <div className="section-inner grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <SectionTitle
+              title="扫码获取郑州电梯内电子屏资源建议"
+              description="直接添加广告顾问微信，说明投放区域、行业、预算和想展示的视频或图片素材，获取更贴近需求的报价和点位资源表。"
+            />
+          </div>
           <div className="grid gap-4">
             <ConsultantCard />
             <Link href="/" className="btn-secondary justify-center">

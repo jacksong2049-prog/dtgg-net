@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ConsultantCard from "@/components/ConsultantCard";
 import FAQ from "@/components/FAQ";
-import LeadForm from "@/components/LeadForm";
 import SectionTitle from "@/components/SectionTitle";
 import { siteConfig } from "@/config/site";
 import { priceFaqs } from "@/data/faqs";
@@ -62,8 +61,13 @@ export default function PricePage() {
       </section>
 
       <section className="section-shell">
-        <div className="section-inner grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <LeadForm />
+        <div className="section-inner grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <SectionTitle
+              title="具体报价建议扫码咨询"
+              description="郑州电梯内电子屏广告价格与区域、点位数量、投放周期和资源档期有关。扫码后可直接发送预算和投放区域，获取报价区间。"
+            />
+          </div>
           <ConsultantCard />
         </div>
       </section>
