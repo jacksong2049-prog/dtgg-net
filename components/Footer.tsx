@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 export default function Footer() {
   return (
     <footer className="bg-ink px-4 py-10 text-slate-300 md:px-6">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <p className="text-lg font-bold text-white">{siteConfig.siteName}</p>
           <p className="mt-3 max-w-xl text-sm leading-7">{siteConfig.description}</p>
@@ -26,6 +26,13 @@ export default function Footer() {
           <div className="mt-3 grid gap-2 text-sm">
             <span>请在页面二维码区域扫码添加广告顾问微信。</span>
             <span>域名：{siteConfig.domain}</span>
+          </div>
+        </div>
+        <div>
+          <p className="font-semibold text-white">兄弟站点</p>
+          <div className="mt-3 grid gap-2 text-sm">
+            <a href="https://diantimedia.com" target="_blank" rel="dofollow" className="transition-colors hover:text-white">郑州电梯广告 · 梯媒网</a>
+            <a href="https://www.diantiguanggao.com" target="_blank" rel="dofollow" className="transition-colors hover:text-white">电梯广告投放平台</a>
           </div>
         </div>
       </div>
