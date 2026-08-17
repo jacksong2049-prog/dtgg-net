@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -72,6 +74,8 @@ var _hmt = _hmt || [];
         />
       </head>
       <body>
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-X5S3ZMKLWQ" strategy="afterInteractive" />
+<Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-X5S3ZMKLWQ');`}</Script>
         <Header />
         {children}
         <Footer />
